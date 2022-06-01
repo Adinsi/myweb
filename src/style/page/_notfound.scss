@@ -1,0 +1,29 @@
+.notfound{
+    @include verticalCenter;
+    height: 95vh;
+    max-width: 1200px;
+    background-color: $color_3;
+    border-radius: $borderRadius;
+    text-align: center;
+    h3{
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+
+    button{
+        padding: 1rem 2rem;
+        border-radius: $borderRadius;
+        background: $color_5;
+        transition: .2s;
+        &:hover{
+            background-color: $color_4;
+        }
+        i{
+            margin-right: 10px;
+        }
+        span{
+            font-size: $font_1;
+        }
+
+    }
+}

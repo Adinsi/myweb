@@ -1,0 +1,165 @@
+.sidebar{
+    background-color: $color_1;
+    font-family: $font_1;
+    height: 100%;
+    min-height: $min_height;
+    width: 264px;
+    border-radius: $borderRadius;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 1fr 100px;
+    grid-template-areas:
+    "1"
+    "2"
+    "3" ;
+    .id{
+        grid-area: 1;
+        text-align: center;
+        user-select: none;
+        position: relative;
+        .idContent{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+           img{
+               border-radius: 50%;
+               box-shadow: 0 0 0 4px $color_3, 0 0 0 8px $color_4, 0 0 12px $color_2;
+           }
+           h3{
+               font-size: 1.3rem;
+               text-transform: uppercase;
+               letter-spacing: .2rem;
+               margin-top: 1.5rem;
+               color: $color_5;
+           }
+            
+    
+        }
+    
+    }
+    
+}
+
+.navigation{
+    grid-area: 2;
+    padding: 2rem 1rem;
+
+    ul{
+        height: 100%;
+        display: grid;
+        li{
+            padding: 1rem 0 1rem .4rem;
+            font-size: 1.3rem;
+            position: relative;
+            &:hover i{
+                transform: translate(3px,3px);
+                
+            }
+            a{
+                color: $color_5;
+                
+            }
+            span{
+                margin-left: 2.5rem;
+               
+            }
+            i{
+                position: absolute;
+                font-size: .95rem;
+                transform: translateY(3px);
+                transition: 0.2s ease;
+            }
+           
+        }
+       
+    }
+}
+
+.socialNetwork{
+    grid-area: 3;
+    
+    ul{
+        display: flex;
+        width: 264px;
+        padding: 0 14px;
+        justify-content: space-between;
+        li{
+            font-size: 1.4rem;
+            background-color: $color_5;
+            color: $color_1;
+            border-radius: 50%;
+            padding: .3rem .5rem;
+            transition: 1s;
+            cursor: pointer;
+            a:visited{
+                color: $color_1;
+            }
+            &:hover{
+                background-color: $color_4;
+            }
+        }
+
+    }
+
+}
+
+.signature{
+    text-align: center;
+    letter-spacing: .5rem;
+    font-size: .7rem;
+    margin-top: 2rem;
+    p{
+        color: $color_5;
+        &:hover{
+            color: $color_4;
+        }
+    }
+
+}
+
+@media  screen and(max-width :850px ) {
+  .sidebar{
+      display: flex;
+      min-height: 50px;
+      margin-bottom: .2rem;
+      width: 100%;
+      .id,  .socialNetwork{
+          display: none;
+      }
+
+      .navigation{
+          width: 100%;
+          padding: .1rem 1rem;
+      }
+      ul{
+          display: flex;
+          justify-content: space-between;
+      }
+      span{
+          margin-left: 1.5rem !important;
+      }
+  }
+    
+}
+
+@media screen and (max-width:500px) {
+    .sidebar{
+        ul{
+            justify-content: space-around;
+            li{
+padding: 1.4rem !important;
+            }
+            i{
+                font-size: 1.4rem !important;
+                transform: translateY(-8px) !important;
+            }
+            span{
+                display: none
+            };
+        }
+    }
+    
+}
